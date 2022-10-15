@@ -10,8 +10,8 @@ var db *gorm.DB
 type Todo struct {
 	gorm.Model
 	id int64 `gorm:"primaryKey;autoIncrement"` 
-	content string
-	isCompleted bool `gorm:"default:false"` 
+	Content string `json:"content"`
+	IsCompleted bool `gorm:"default:false" json:"isCompleted"` 
 }
 
 func init() {
